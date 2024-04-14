@@ -30,7 +30,7 @@ a:active {
 
 .cards {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   background-color: var(--background-color-cards);
   gap: 32px;
   justify-content: center;
@@ -41,8 +41,9 @@ a:active {
   background-color: var(--background-color);
   border: solid var(--border-color);
   border-radius: 5%;
-  width: 368px;
-  height: 538px;
+  max-width: 75rem;
+  height: 600px;
+  margin-bottom: 30px;
 }
 
 .cafe {
@@ -59,6 +60,7 @@ a:active {
   border: solid var(--background-color-cafe);
   border-radius: 1rem;
   width: 5rem;
+  padding-left: 10px;
 }
 
 .food-truck {
@@ -75,9 +77,18 @@ a:active {
   border: solid var(--background-color-food-truck);
   border-radius: 1rem;
   width: 9rem;
+  padding-left: 10px;
 }
 
 .line-vector {
   stroke: var(--line-vector-color);
   height: 32px;
+}
+
+/*Tablete si monitoare cu ecrane peste 772px*/
+@media screen and (min-width: 772px) {
+  .cards {
+    display: flex;
+    flex-direction: row;
+  }
 }
